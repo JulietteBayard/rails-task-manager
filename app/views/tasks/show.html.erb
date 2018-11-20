@@ -1,0 +1,21 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+
+  <p class="details"><%= @task.details %></p>
+  <div>
+    <input type="checkbox" <%= @task.completed ? "checked" : "" %>>
+    <label><%= @task.completed ? "This task is completed" : "This task is not completed yet" %></label>
+  </div>
+
+  <div style="margin: 20px;">
+  <%= link_to "Back to list", tasks_path %>
+  </div>
+
+  <div style="margin: 20px;">
+  <%= link_to "Edit this task", edit_path %>
+  </div>
+
+  <div style="margin: 20px;">
+  <%= link_to "Delete this task", task_path(@task), method: :delete %>
+  </div>
+</div>
